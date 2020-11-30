@@ -42,7 +42,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub ${AWS::StackName}-DefineAuthChallenge
-      CodeUri: s3://webauthn-with-amazon-cognito/DefineAuthChallenge
+      CodeUri: DefineAuthChallenge.js
       Handler: index.handler
       Runtime: nodejs12.x
       MemorySize: 1024
@@ -60,7 +60,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub ${AWS::StackName}-CreateAuthChallenge
-      CodeUri: s3://webauthn-with-amazon-cognito/CreateAuthChallenge
+      CodeUri: CreateAuthChallenge.js
       Handler: index.handler
       Runtime: nodejs12.x
       MemorySize: 1024
@@ -78,7 +78,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub ${AWS::StackName}-VerifyAuthChallenge
-      CodeUri: s3://webauthn-with-amazon-cognito/VerifyAuthChallenge
+      CodeUri: VerifyAuthChallenge.js
       Handler: index.handler
       Runtime: nodejs12.x
       MemorySize: 1024
